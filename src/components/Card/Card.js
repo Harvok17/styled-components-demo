@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { Wrapper, StatusWrapper, ButtonsWrapper, Image } from "./Card.styles";
 import Button from "../Button/Button";
 import { faThumbsUp, faShare } from "@fortawesome/free-solid-svg-icons";
-import "./Card.css";
+// import "./Card.css";
 
 const Card = ({ mode }) => {
   const [likes, setLikes] = useState(0);
@@ -25,17 +26,17 @@ const Card = ({ mode }) => {
     );
   };
   return (
-    <div className="card">
-      <div className="card__image" mode={mode} />
-      <div className="card__status">
+    <Wrapper>
+      <Image mode={mode} />
+      <StatusWrapper>
         {renderLikes()}
         {renderShares()}
-      </div>
-      <div className="card__buttons">
+      </StatusWrapper>
+      <ButtonsWrapper>
         <Button text="Like" icon={faThumbsUp} onClick={addLikes} />
         <Button text="Share" icon={faShare} onClick={addShares} />
-      </div>
-    </div>
+      </ButtonsWrapper>
+    </Wrapper>
   );
 };
 

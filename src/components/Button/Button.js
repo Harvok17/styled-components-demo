@@ -1,11 +1,12 @@
 import React from "react";
+import { ButtonWrapper } from "./Button.styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./Button.css";
+// import "./Button.css";
 
 const Button = ({ text, onClick, icon }) => (
-  <button className="btn" onClick={onClick}>
+  <ButtonWrapper onClick={onClick}>
     {icon && <FontAwesomeIcon icon={icon} />} {text}
-  </button>
+  </ButtonWrapper>
 );
 
 export default Button;

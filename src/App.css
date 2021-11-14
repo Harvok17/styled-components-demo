@@ -1,19 +1,21 @@
 :root {
   --body: #dadfe1;
   --card: #ffffff;
-  --toggle: #e6a555;
+  --toggle: #ffffff;
   --text: #000;
   --hover: rgba(228, 230, 235, 0.9);
-  --image: url("./assets/light-image.png");
+  --image: url("./assets/amagi_black.png");
+  --knob: #333333;
 }
 
 [data-theme="dark"] {
   --body: #1c1e21;
   --card: #333333;
-  --toggle: #2c4b98;
+  --toggle: #333333;
   --text: lightgrey;
   --hover: rgba(228, 230, 235, 0.1);
-  --image: url("./assets/dark-image.png");
+  --image: url("./assets/amagi_white.png");
+  --knob: #ffffff;
 }
 
 * {
