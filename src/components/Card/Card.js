@@ -10,7 +10,7 @@ const Card = ({ mode }) => {
   const addLikes = () => setLikes(likes + 1);
   const addShares = () => setShares(shares + 1);
   const renderLikes = () => {
-    if (!likes) return;
+    if (!likes) return <span></span>;
     return likes === 1 ? (
       <span>{`${likes} Like`}</span>
     ) : (
@@ -18,7 +18,7 @@ const Card = ({ mode }) => {
     );
   };
   const renderShares = () => {
-    if (!shares) return;
+    if (!shares) return <span></span>;
     return shares === 1 ? (
       <span>{`${shares} Share`}</span>
     ) : (
